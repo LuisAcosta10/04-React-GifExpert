@@ -2,6 +2,7 @@
 import { GifItem } from "./GifItem";
 import useFetchGifs from "../hooks/useFetchGifs";
 // import { getGifs } from "../helpers/getGifs"
+import PropTypes from 'prop-types'
 
 export const GitGrid = ({ category }) => {
 
@@ -36,6 +37,9 @@ export const GitGrid = ({ category }) => {
 }
 
 
+GitGrid.propTypes = {
+    category: PropTypes.string.isRequired,
+}
 
 
 

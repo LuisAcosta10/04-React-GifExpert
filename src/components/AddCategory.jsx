@@ -1,14 +1,15 @@
 // import React from 'react'
 
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
 export const AddCategory = ({ OnNewCategory }) => {
 
-  const [inputValue, setInputValue] = useState('');
+    const [ inputValue, setInputValue ] = useState('');
 
-  const onInputChange = ({ target }) => {
-    setInputValue(target.value)
-  }
+    const onInputChange = ({ target }) => {
+        setInputValue( target.value );
+    }
 
   const onSubmit = (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del formulario
@@ -32,4 +33,9 @@ export const AddCategory = ({ OnNewCategory }) => {
     </form>
 
   )
+}
+
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired,
 }

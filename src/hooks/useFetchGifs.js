@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getGifs } from '../helpers/getGifs';
-
+// cuando se exporta de esta manera en donde lo ocupemos lo tenemos que importar con { }
+// export const useFetchGifs = ( category ) => {
 const useFetchGifs = ( category ) => {
     const [images, setImages] = useState([]);
     const [isLoading, setIsLoading] = useState( true );
@@ -19,5 +20,5 @@ const useFetchGifs = ( category ) => {
       isLoading
   }
 }
-
+// cuando se exporta de esta manera en donde lo ocupemos lo tenemos que importar sin { }
 export default useFetchGifs
